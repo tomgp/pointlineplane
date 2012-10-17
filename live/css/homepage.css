@@ -1,0 +1,25 @@
+* {
+  font-family: 'Source Sans Pro', sans-serif;
+}
+.home_page_story {
+  background-color: #F0F;
+  float: left;
+  clear: left;
+  padding: 0px;
+  margin: 0px;
+  color: #FFF;
+}
+.icon_button {
+  background-repeat: no-repeat;
+  background-color: #aaaaaa;
+  width: 64px;
+  height: 64px;
+  display: inline-block;
+  padding: 0px;
+}
+.back_button {
+  background-image: url('/img/ui/left_arrow.png');
+}
+.next_button {
+  background-image: url('/img/ui/right_arrow.png');
+}
