@@ -1,7 +1,7 @@
 @icon_colour:#AAA;
 @page_background:#fff;
 @main_highlight:#F0F;
-@font_colour:#222;
+@font_colour:#556;
 
 *{
 	font-family: 'Source Sans Pro', sans-serif;
@@ -11,6 +11,15 @@
 /*TODO, define font size stops in pixels for responsiveness*/
 
 html { } 
+.background{
+	position: fixed;
+	top:0px;
+	left:0px;
+	width:100%;
+	height: 100%;
+	.pattern_gradient;
+	z-index: -100;
+}
 
 span.more {
 	border:0px;
@@ -39,7 +48,7 @@ body{
 	text-align: center;
 }
 h1{
-	color: @font_colour;
+	color: @page_background;
 	text-align: center;
 }
 
@@ -48,6 +57,7 @@ h1{
 	max-width: 50%;
 	margin-left: auto;
 	margin-right: auto;
+	background-color: @page_background;
 }
 
 .homepage_story{
@@ -183,4 +193,16 @@ mixins
 	background: -ms-linear-gradient(-45deg,  #5bbc3f 0%,#ffb900 20%,#f88300 40%,#e43a39 60%,#983a98 80%,#009cde 100%); /* IE10+ */
 	background: linear-gradient(135deg,  #5bbc3f 0%,#ffb900 20%,#f88300 40%,#e43a39 60%,#983a98 80%,#009cde 100%); /* W3C */
 	filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#5bbc3f', endColorstr='#009cde',GradientType=1 ); /* IE6-9 fallback on horizontal gradient */
+}
+
+.pattern_gradient{
+	background-color:#556;
+background-image: linear-gradient(30deg, #445 12%, transparent 12.5%, transparent 87%, #445 87.5%, #445),
+linear-gradient(150deg, #445 12%, transparent 12.5%, transparent 87%, #445 87.5%, #445),
+linear-gradient(30deg, #445 12%, transparent 12.5%, transparent 87%, #445 87.5%, #445),
+linear-gradient(150deg, #445 12%, transparent 12.5%, transparent 87%, #445 87.5%, #445),
+linear-gradient(60deg, #99a 25%, transparent 25.5%, transparent 75%, #99a 75%, #99a), 
+linear-gradient(60deg, #99a 25%, transparent 25.5%, transparent 75%, #99a 75%, #99a);
+background-size:80px 140px;
+background-position: 0 0, 0 0, 40px 70px, 40px 70px, 0 0, 40px 70px;
 }
