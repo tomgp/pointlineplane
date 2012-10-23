@@ -1,17 +1,142 @@
 @icon_colour:#AAA;
-
+@page_background:#EFEFEF;
+@main_highlight:#F0F;
+@font_colour:#222;
 
 *{
 	font-family: 'Source Sans Pro', sans-serif;
+	color: @font_colour;
 }
 
+/*TODO, define font size stops in pixels for responsiveness*/
+
+html { font-size: 100%; } 
+
+span.more {
+	border:0px;
+    border-bottom: 1px;
+    border-style: dotted;
+    cursor: pointer;
+	cursor: hand;
+}
+
+
+body{
+	background-color: @page_background;
+}
+
+#story1{
+
+	.rainbow_gradient;
+}
+#story2{
+	background-image: url('/img/backgrounds/seat_calc.gif');
+	background-repeat: no-repeat;
+	background-position: right;
+	background-color: #FFF;
+}
+#story3{
+	background-image: url('/img/backgrounds/uk_crash_map.gif');	
+	background-repeat: no-repeat;
+	background-position: bottom right;
+	background-color: #000;
+}
+
+#story4{
+	background-image: url('/img/backgrounds/what_is_poor.gif');	
+	background-repeat: no-repeat;
+	background-position: right;
+	background-color: #FFF;
+}
+#story5{
+	background-image: url('/img/backgrounds/investigate.gif');	
+	background-repeat: no-repeat;
+	background-position: bottom right;
+	background-color: #000;
+}
+#story6{
+	background-image: url('/img/backgrounds/terminator.gif');	
+	background-position: top right;
+	background-color: #000;
+}
+
+/*TODO, define p.story max-width stops in pixels for responsiveness*/
+
 .home_page_story{
-	background-color: #F0F;
+	padding: 0px;
+	margin: 0px;
+	border-bottom-width: 3px;
+	border-bottom-color: @font_colour;
+}
+
+li{
+	background: @page_background;
+}
+
+p.story{
+	max-width: 50%;
+	word-spacing: 0.3rem;
+	clear: left;
+	padding:1.1rem;
+	margin:0.9rem;
+	margin-left: 0rem;
+	padding-left: 0rem;
+	background: @page_background;
+	display: block;
+	opacity:0.9;
+}
+a.story_extra{
+	
+}
+
+h2.story_title{
+	background-color: @font_colour;
+	font-size: 2rem;
+	color: #FFF;
+	padding-right:1.1rem;
 	float:left;
 	clear:left;
-	padding: 0px;
 	margin:0px;
+	display: block;
+}
+
+h3.story_sub_title{
+	float:left;
+	clear:left;
+	margin:0px;
+	display: block;	
+	background-color: @font_colour;
 	color: #FFF;
+}
+
+.sorry_ie{
+	width:400px;
+	border-width: 1px; 
+	border-style:solid;
+	border-color: @font_colour;
+padding:8px;
+}
+
+/* 
+mixins
+*/
+
+.rainbow_gradient{
+	background: #5bbc3f; /* Old browsers */
+	background: -moz-linear-gradient(-45deg,  #5bbc3f 0%, #ffb900 20%, #f88300 40%, #e43a39 60%, #983a98 80%, #009cde 100%); /* FF3.6+ */
+	background: -webkit-gradient(linear, left top, right bottom, color-stop(0%,#5bbc3f), color-stop(20%,#ffb900), color-stop(40%,#f88300), color-stop(60%,#e43a39), color-stop(80%,#983a98), color-stop(100%,#009cde)); /* Chrome,Safari4+ */
+	background: -webkit-linear-gradient(-45deg,  #5bbc3f 0%,#ffb900 20%,#f88300 40%,#e43a39 60%,#983a98 80%,#009cde 100%); /* Chrome10+,Safari5.1+ */
+	background: -o-linear-gradient(-45deg,  #5bbc3f 0%,#ffb900 20%,#f88300 40%,#e43a39 60%,#983a98 80%,#009cde 100%); /* Opera 11.10+ */
+	background: -ms-linear-gradient(-45deg,  #5bbc3f 0%,#ffb900 20%,#f88300 40%,#e43a39 60%,#983a98 80%,#009cde 100%); /* IE10+ */
+	background: linear-gradient(135deg,  #5bbc3f 0%,#ffb900 20%,#f88300 40%,#e43a39 60%,#983a98 80%,#009cde 100%); /* W3C */
+	filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#5bbc3f', endColorstr='#009cde',GradientType=1 ); /* IE6-9 fallback on horizontal gradient */
+}
+
+/*
+
+
+.navigation{
+	z-index: 1;
 }
 
 .icon_button{
@@ -20,13 +145,20 @@
 	width:64px;
 	height:64px;
 	display: inline-block;
-	padding: 0px;
 }
 
 .back_button{
 	background-image: url('/img/ui/left_arrow.png');
+	position: fixed;
+	top:0px;
+	left:0px;
+	margin: 8px;
 }
 
 .next_button{
 	background-image: url('/img/ui/right_arrow.png');
-}
+	position: fixed;
+	top:0px;
+	left:64px;
+	margin: 8px;
+}*/
