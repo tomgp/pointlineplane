@@ -25,41 +25,6 @@ body{
 	background-color: @page_background;
 }
 
-#story1{
-
-	.rainbow_gradient;
-}
-#story2{
-	background-image: url('/img/backgrounds/seat_calc.gif');
-	background-repeat: no-repeat;
-	background-position: right;
-	background-color: #FFF;
-}
-#story3{
-	background-image: url('/img/backgrounds/uk_crash_map.gif');	
-	background-repeat: no-repeat;
-	background-position: bottom right;
-	background-color: #000;
-}
-
-#story4{
-	background-image: url('/img/backgrounds/what_is_poor.gif');	
-	background-repeat: no-repeat;
-	background-position: right;
-	background-color: #FFF;
-}
-#story5{
-	background-image: url('/img/backgrounds/investigate.gif');	
-	background-repeat: no-repeat;
-	background-position: bottom right;
-	background-color: #000;
-}
-#story6{
-	background-image: url('/img/backgrounds/terminator.gif');	
-	background-position: top right;
-	background-color: #000;
-}
-
 /*TODO, define p.story max-width stops in pixels for responsiveness*/
 
 .home_page_story{
@@ -67,6 +32,11 @@ body{
 	margin: 0px;
 	border-bottom-width: 3px;
 	border-bottom-color: @font_colour;
+}
+
+.story_more_hidden{
+	visibility: hidden;
+	height: 0px;
 }
 
 li{
@@ -78,7 +48,6 @@ p.story{
 	word-spacing: 0.3rem;
 	clear: left;
 	padding:1.1rem;
-	margin:0.9rem;
 	margin-left: 0rem;
 	padding-left: 0rem;
 	background: @page_background;
@@ -107,6 +76,14 @@ h3.story_sub_title{
 	display: block;	
 	background-color: @font_colour;
 	color: #FFF;
+}
+
+.more_button{
+	background-color: #f00;
+}
+
+.less_button{
+	background-color: #0f0;
 }
 
 .sorry_ie{
