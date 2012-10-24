@@ -1,10 +1,10 @@
 @icon_colour:#AAA;
 @page_background:#fff;
 @main_highlight:#F0F;
-@font_colour:#556;
+@font_colour:#000;
 
 *{
-	font-family: 'Source Sans Pro', sans-serif;
+	font-family: 'Helvetica', sans-serif;
 	color: @font_colour;
 }
 
@@ -33,7 +33,6 @@
 	left:0px;
 	width:100%;
 	height: 100%;
-	.dark_blue_gradient;
 	z-index: -100;
 }
 
@@ -57,6 +56,8 @@ img.story_small{
 img.story_medium{
 	width:100%;
 	/*padding-left: 1rem;*/
+	padding-left:1rem;
+	padding-right: 1rem;
 	clear:both;
 	display: block;
 	margin-left: auto;
@@ -73,7 +74,6 @@ body{
 	text-align: center;
 }
 h1{
-	color: @page_background;
 	text-align: center;
 }
 
@@ -118,6 +118,13 @@ p.story{
 	padding: 1rem;
 }
 
+h1.story_title{
+	width:100%;
+	white-space: nowrap;
+	padding-left: 1rem;
+	padding-right: 1rem;
+}
+
 h2.story_title{
 	font-size: 2rem;
 	margin:0px;
@@ -125,6 +132,7 @@ h2.story_title{
 	padding-left: 1rem;
 	padding-right: 1rem;
 	display: block;
+	white-space: nowrap;
 }
 
 h3.story_sub_title{

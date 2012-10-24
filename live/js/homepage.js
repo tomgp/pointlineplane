@@ -1,8 +1,13 @@
 $(function(){
 	console.log("hello zepto");
 	var story_more = $('.story_more');
+	var content_width = 0;
 	story_more.addClass('story_more_hidden');
 	$.each(story_more, prepend_more_link);
+	sizeHeadings();
+	window.onresize = sizeHeadings;
+
+	
 
 	//if the page is wide enough, replace the images with larger ones
 	//if the images are small make them clickable to enlarge
@@ -25,7 +30,17 @@ $(function(){
 		link.toggleClass('more_button').toggleClass('less_button');
 		return false;
 	}
+
+	function sizeHeadings(){
+		var current_width = $('#main_content').width()
+		if(content_width != current_width){
+			content_width = current_width;
+			$('h1.story_title').textFillWidth({ maxFontPixels: 200 });
+		}
+	}
 });
+
+
 
 //zepto scroll
 // http://maxdegterev.name/experiments/zscroll/static/zepto.scroll.js
@@ -59,3 +74,22 @@ $(function(){
 		animate();
 	};
 }(Zepto));
+
+;(function($) {
+    $.fn.textFillWidth = function(options) {
+    	//check that this whitespace is set to no-wrap otherwise no go!
+    	if($(this).css('white-space') == 'nowrap'){
+
+    		var fontSize = options.maxFontPixels;
+    		console.log('hello' + ourText);
+	        var ourText = $('span', this);
+	        var maxWidth = $(this).width();
+	        do {
+	            ourText.css('font-size', fontSize);
+	            textWidth = ourText.width();
+	            fontSize = fontSize - 1;
+	        } while ( (textWidth > maxWidth) && fontSize > 3);
+    	}
+        return this;       
+    }
+})(Zepto);
