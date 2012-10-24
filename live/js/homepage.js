@@ -4,6 +4,8 @@ $(function(){
 	story_more.addClass('story_more_hidden');
 	$.each(story_more, prepend_more_link);
 
+	//if the page is wide enough, replace the images with larger ones
+	//if the images are small make them clickable to enlarge
 
 	//functions
 

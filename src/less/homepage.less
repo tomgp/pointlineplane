@@ -10,14 +10,30 @@
 
 /*TODO, define font size stops in pixels for responsiveness*/
 
-html { } 
+@media (min-width: 800px) {
+    html {
+        font-size: 18px;
+    }
+    .content{
+    	max-width: 640px;
+    }
+}
+@media (max-width: 799px) {
+    html {
+        font-size: 12px;
+    }
+    .content{
+    	max-width: 400px;
+    }
+}
+
 .background{
 	position: fixed;
 	top:0px;
 	left:0px;
 	width:100%;
 	height: 100%;
-	.pattern_gradient;
+	.dark_blue_gradient;
 	z-index: -100;
 }
 
@@ -31,6 +47,15 @@ span.more {
 
 img.story_small{
 	width:300px;
+	/*padding-left: 1rem;*/
+	clear:both;
+	display: block;
+	margin-left: auto;
+	margin-right: auto;
+}
+
+img.story_medium{
+	width:100%;
 	/*padding-left: 1rem;*/
 	clear:both;
 	display: block;
@@ -54,7 +79,6 @@ h1{
 
 /*TODO, define p.story max-width stops in pixels for responsiveness*/
 .content{
-	max-width: 50%;
 	margin-left: auto;
 	margin-right: auto;
 	background-color: @page_background;
@@ -83,6 +107,9 @@ li{
 }
 
 p.story{
+	font-weight: lighter;
+	color: #000;
+	font-size: 1.2rem;
 	word-spacing: 0.3rem;
 	clear: left;
 	line-height: 1.5rem;
@@ -193,6 +220,17 @@ mixins
 	background: -ms-linear-gradient(-45deg,  #5bbc3f 0%,#ffb900 20%,#f88300 40%,#e43a39 60%,#983a98 80%,#009cde 100%); /* IE10+ */
 	background: linear-gradient(135deg,  #5bbc3f 0%,#ffb900 20%,#f88300 40%,#e43a39 60%,#983a98 80%,#009cde 100%); /* W3C */
 	filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#5bbc3f', endColorstr='#009cde',GradientType=1 ); /* IE6-9 fallback on horizontal gradient */
+}
+
+.dark_blue_gradient{
+background: #1c2130; /* Old browsers */
+background: -moz-linear-gradient(top,  #1c2130 0%, #3f4c6b 100%); /* FF3.6+ */
+background: -webkit-gradient(linear, left top, left bottom, color-stop(0%,#1c2130), color-stop(100%,#3f4c6b)); /* Chrome,Safari4+ */
+background: -webkit-linear-gradient(top,  #1c2130 0%,#3f4c6b 100%); /* Chrome10+,Safari5.1+ */
+background: -o-linear-gradient(top,  #1c2130 0%,#3f4c6b 100%); /* Opera 11.10+ */
+background: -ms-linear-gradient(top,  #1c2130 0%,#3f4c6b 100%); /* IE10+ */
+background: linear-gradient(to bottom,  #1c2130 0%,#3f4c6b 100%); /* W3C */
+filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#1c2130', endColorstr='#3f4c6b',GradientType=0 ); /* IE6-9 */
 }
 
 .pattern_gradient{
