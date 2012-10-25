@@ -1,0 +1,29 @@
+<div class="homepage_story" id="story6">
+				<h2 class="story_title">Sketches, Experiments and Personal Projects</h2>
+				<div class="story_intro">
+					<p class="story">
+						My favourite part of making things for the web is learning new technologies and languages, prtotyping new ideas and trying out new software. Here are some interesting bits and pieces I've made, either in the course of my work or out of personal curiosity. 
+					</p>
+				</div>
+				<div class="story_more">
+					<!--<h3 class="story_sub_title">De-hulkify</h3>
+					<p class="story">
+						Hulk Film Critic is one of my favourite columns on the internet but reading 20,000 words in ALL CAPS gives me a headache. To fix the problem I created a Chome extension which de-hulkifies Hulk Film Crit articles at the click of a button. 
+					</p>-->
+					<h3 class="story_sub_title">Oblique strategies</h3>
+					<p class="story">
+						I wanted to learn about the new HTML5 local storage API so I created <a href="http://oblique.pointlineplane.co.uk/">a virtual Oblique Strategies deck</a> that works offline and will remember which cards you've already seen between visits. 
+					</p>
+					<h3 class="story_sub_title">Day/ Night Terminator</h3>
+					<p class="story">
+						<a href="http://www.pointlineplane.co.uk/sketch/canvas/terminator.html">This HTML5 canvas based interactive</a> was built as a quick sketch for part of an interactive graphic examining the transit of Venus. It shows what areas of the earth are in shadow and which are in the sun at a given (adjustable) time and date. It's quite fun to watch the terminator (the line that separates night from day on the earth surface) flex and distort illustrating accidentally the effect that projection has on a straight line drawn on the earths surface.
+					</p>
+					<h3 class="story_sub_title">Deaths of the Iliad</h3>
+					<p class="story">
+						Ever wanted to read, in order, every death in Homers epic poem The Iliad? <a href="http://deathsoftheiliad.tumblr.com">Well now you can</a>! Or perhaps you're just interested in those deaths which involve nipples&mdash;<a href="http://deathsoftheiliad.tumblr.com/tagged/nipple">no problem</a>. 
+					</p>
+					<p class="story">
+						Reading The Iliad I was struck by how brutal and gory the battle scenes were. So I decided to transcribe them all and put them on a tumblr. I didn't realise when I started there would be quite so many.
+					</p>
+				</div>
+			</div>

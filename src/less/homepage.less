@@ -1,5 +1,5 @@
 @icon_colour:#AAA;
-@page_background:#fff;
+@page_background:#46b8ed;
 @main_highlight:#F0F;
 @font_colour:#000;
 
@@ -7,6 +7,16 @@
 	font-family: 'Helvetica', sans-serif;
 	color: @font_colour;
 }
+
+::selection {
+	background: #fff; /* Safari */
+	color: #000;
+	}
+::-moz-selection {
+	background: #fff; /* Firefox */
+	color: #000;
+}
+
 
 /*TODO, define font size stops in pixels for responsiveness*/
 
@@ -25,15 +35,6 @@
     .content{
     	max-width: 400px;
     }
-}
-
-.background{
-	position: fixed;
-	top:0px;
-	left:0px;
-	width:100%;
-	height: 100%;
-	z-index: -100;
 }
 
 span.more {
@@ -55,9 +56,6 @@ img.story_small{
 
 img.story_medium{
 	width:100%;
-	/*padding-left: 1rem;*/
-	padding-left:1rem;
-	padding-right: 1rem;
 	clear:both;
 	display: block;
 	margin-left: auto;
@@ -68,32 +66,37 @@ body{
 	background-color: @page_background;
 }
 .header{
-	margin-left: auto;
-	margin-right: auto;
-	width:50%;
-	text-align: center;
+	color: @page_background;
+	padding: 0.5rem;
+	position: fixed;
+	background: #fff;
+	text-align: right;
+	top:0px;
+	left:0px;
+	z-index: 10;
 }
-h1{
-	text-align: center;
-}
+
 
 /*TODO, define p.story max-width stops in pixels for responsiveness*/
 .content{
+	padding-top: 3rem;
 	margin-left: auto;
 	margin-right: auto;
 	background-color: @page_background;
 }
 
 .homepage_story{
-
+	border-bottom-style: solid;
+	border-bottom-width: 1px;
+	border-bottom-color: #000;  
 }
 .story_more{
 	position: relative;
-	z-index: 1;
+
 }
 .story_intro{
 	position: relative;
-	z-index: 2;	
+
 }
 
 .story_more_hidden{
@@ -101,7 +104,9 @@ h1{
 	height: 0px;
 }
 
-
+div.links{
+	padding: 1rem;
+}
 li{
 	background: @page_background;
 }
@@ -119,10 +124,11 @@ p.story{
 }
 
 h1.story_title{
-	width:100%;
 	white-space: nowrap;
 	padding-left: 1rem;
 	padding-right: 1rem;
+	color: @page_background;
+	background-color: @font_colour;
 }
 
 h2.story_title{
