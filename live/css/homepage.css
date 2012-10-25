@@ -70,7 +70,6 @@ body {
   padding: 0.5rem;
   position: fixed;
   background: #fff;
-  text-align: right;
   top: 0px;
   left: 0px;
   font-weight: bold;
@@ -111,7 +110,7 @@ body {
   height: 0px;
 }
 div.links {
-  padding-top: 1rem;
+  padding-top: 3rem;
   border-bottom-style: solid;
   border-bottom-width: 1px;
   border-bottom-color: #000;
@@ -139,8 +138,8 @@ h1.story_title {
   white-space: nowrap;
   padding-left: 1rem;
   padding-right: 1rem;
-  padding-top: 0.1rem;
-  padding-bottom: 0.1rem;
+  padding-top: 0.2rem;
+  padding-bottom: 0.2rem;
   color: #fff;
   background-color: #000000;
 }
