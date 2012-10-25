@@ -16,7 +16,9 @@
 	background: #fff; /* Firefox */
 	color: #000;
 }
-
+.blocker{
+	clear:both;
+}
 
 /*TODO, define font size stops in pixels for responsiveness*/
 
@@ -36,6 +38,14 @@
     	max-width: 400px;
     }
 }
+
+li{
+	font-weight: lighter;
+	font-size: 1rem;
+	word-spacing: 0.3rem;
+	line-height: 1.5rem;
+}
+
 
 span.more {
 	border:0px;
@@ -74,6 +84,16 @@ body{
 	left:0px;
 	font-weight: bold;
 	z-index: 10;
+	opacity:0.9;
+	filter:alpha(opacity=90); /* For IE8 and earlier */
+}
+.footer{
+	font-weight: lighter;
+	font-size: 1rem;
+	word-spacing: 0.3rem;
+	line-height: 1.5rem;
+	text-align: right;
+	padding-top: 1rem;
 }
 
 
@@ -106,9 +126,19 @@ body{
 
 div.links{
 	padding-top: 1rem;
+	padding-top: 1rem;
+	border-bottom-style: solid;
+	border-bottom-width: 1px;
+	border-bottom-color: #000;  
 }
+div.linkset{
+	width:50%;
+	float: left;
+}
+
 li{
 	background: @page_background;
+	list-style-type: circle;
 }
 
 p.story{
@@ -127,6 +157,8 @@ h1.story_title{
 	white-space: nowrap;
 	padding-left: 1rem;
 	padding-right: 1rem;
+	padding-top: 0.1rem;
+	padding-bottom: 0.1rem;
 	color: #fff;
 	background-color: @font_colour;
 }
@@ -142,12 +174,11 @@ h2.story_title{
 }
 
 h3{
-	float:left;
-	clear:left;
 	padding-left: 1rem;
 	padding-right: 1rem;
 	margin:0px;
 	display: block;	
+	font-weight: lighter;
 }
 
 .more_button{	
