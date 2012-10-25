@@ -58,13 +58,13 @@ body {
   background-color: #46b8ed;
 }
 .header {
-  color: #46b8ed;
   padding: 0.5rem;
   position: fixed;
   background: #fff;
   text-align: right;
   top: 0px;
   left: 0px;
+  font-weight: bold;
   z-index: 10;
 }
 /*TODO, define p.story max-width stops in pixels for responsiveness*/
@@ -90,7 +90,7 @@ body {
   height: 0px;
 }
 div.links {
-  padding: 1rem;
+  padding-top: 1rem;
 }
 li {
   background: #46b8ed;
@@ -110,7 +110,7 @@ h1.story_title {
   white-space: nowrap;
   padding-left: 1rem;
   padding-right: 1rem;
-  color: #46b8ed;
+  color: #fff;
   background-color: #000000;
 }
 h2.story_title {
@@ -122,7 +122,7 @@ h2.story_title {
   display: block;
   white-space: nowrap;
 }
-h3.story_sub_title {
+h3 {
   float: left;
   clear: left;
   padding-left: 1rem;
