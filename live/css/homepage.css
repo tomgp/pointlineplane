@@ -142,7 +142,7 @@ h1.story_title {
   color: #fff;
   background-color: #000000;
 }
-h2.story_title {
+h2 {
   font-size: 2rem;
   margin: 0px;
   margin-bottom: 1.1rem;

@@ -42,5 +42,8 @@ $(function(){
 			showMore();
 		}
 	}
-
+	console.log('j')
+	if(init){
+		init(); //if there's an init function run it
+	}
 });

@@ -1,15 +1,3 @@
-<!DOCTYPE html>
-<html lang="en">
-	<head>
-		<link rel="stylesheet" type="text/css" href="/css/homepage.css" />
-		<title>
-			 - Tom Pearson - Web Developer - London
-		</title>
-	</head>
-	<body>		
-		<div class="header"><a href="/">home</a> <a href="http://blog.pointlineplane.co.uk">blog</a> <a href="http://twitter/tomp">twitter</a> - tom.g.pearson@gmail.com</div>
-		<div class="content" id="main_content">
-
 
 <h1 class="story_title">UK Road Crash Data</h1>
 <div class="homepage_story">
@@ -25,19 +13,3 @@
 		Whilst the project was <a href="http://www.itsnicethat.com/articles/bbc-every-road-death-in-great-britain-1999-2010">well recieved</a> some criticism was aimed at the high level visualisation of the whole data set along the lines of &quot;Well it only really tels us what we already know; accidents happen on roads, more often where there are more people&quot;. Whilst this is true I think this kind of imagery can be useful as a way into the story, both as a kind of advertising image and as a way to illustrate sheer scale&mdash;over eleven years there's been an accident on pretty much every road in London and the whole countries road network can be traced out in collisions, I think that's worth showing.
 	</p>
 </div>
-
-<div class="links"><div class="linkset">
-		<h3>Work</h3> 
-		<ul><li><a href="/pages/work/2010_seatcalc.html">Election 2010 Seat Calculator</a></li><li><a href="/pages/work/eu_election.html">European Election Results</a></li><li><a href="/pages/work/jpan_earthquake.html">Japanese Earthquake Visualisation</a></li><li><a href="/pages/work/nhm.html">The Natural History Museum</a></li><li><a href="/pages/work/notw_hacking.html">News Of The World Phonehacking Visualisation</a></li><li><a href="/pages/work/uk_road_crash_data.html">UK Road Crash Data</a></li><li><a href="/pages/work/us_battle_grounds.html">2012 US Battleground States</a></li></ul>
-	</div><div class="linkset">
-		<h3>Sketches & Personal Projects</h3> 
-		<ul><li><a href="/pages/sketches_and_personal_projects/sketch1.html">Election 2010 Seat Calculator</a></li></ul>
-	</div><div class="blocker"></div>	
-</div>
-
-			<div class="footer">&copy; Tom Pearson 2012</div>
-		</div>
-	</body>
-	<script src='/js/vendor/zepto.min.js'></script>
-	<script src='/js/homepage.js'></script>
-</html>
