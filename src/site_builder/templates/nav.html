@@ -1,0 +1,13 @@
+<div class="links">
+	{%- for group in navigation -%}
+	<div class="linkset">
+		<h3>{{ navigation[group].section_title }}</h3> 
+		<ul>
+			{%- for page in navigation[group].pages -%}
+				<li><a href="{{ page.path[1:] }}">{{ page.page_title }}</a></li>
+			{%- endfor -%}
+		</ul>
+	</div>
+	{%- endfor -%}
+	<div class="blocker"></div>	
+</div>
