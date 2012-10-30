@@ -56,4 +56,3 @@ for section in site:
 			print outpath
 			f = open(outpath, 'w')
 			f.write(page_html);
-
