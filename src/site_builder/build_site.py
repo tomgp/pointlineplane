@@ -65,4 +65,4 @@ for section in site:
 page_html = page_template.render( content=site['homepage']['content'], title=site['homepage']['page_title'], links=nav_html )
 f = open(os.path.join(live_path, 'index.html'), 'w')
 f.write(page_html);
-print os.path.join(live_path, 'index.html') + ' written'
+print os.path.join(live_path, 'index.html') + ' written '
