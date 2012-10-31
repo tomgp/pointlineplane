@@ -148,6 +148,8 @@ h2 {
   margin-bottom: 1.1rem;
   padding-left: 1rem;
   padding-right: 1rem;
+  display: block;
+  white-space: nowrap;
 }
 h3 {
   padding-left: 1rem;
