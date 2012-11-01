@@ -43,12 +43,16 @@ $(function(){
 		}
 	}
 	
-	if(init){
+	if(typeof init == 'function'){
 		if(console){
-		console.log('initialise page level JS');
+			console.log('initialise page level JS');
 		}else{
 			alert("Sorry, this page may not work on your browser");
 		}	
 		init(); //if there's an init function run it
+	}else{
+		if(console){
+			console.log('no page level JS');
+		}
 	}
 });
