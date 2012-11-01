@@ -42,8 +42,13 @@ $(function(){
 			showMore();
 		}
 	}
-	console.log('j')
+	
 	if(init){
+		if(console){
+		console.log('initialise page level JS');
+		}else{
+			alert("Sorry, this page may not work on your browser");
+		}	
 		init(); //if there's an init function run it
 	}
 });

@@ -1,0 +1,69 @@
+
+ 	<h1 class="story_title">Canvas Mandlebrot</h1>
+   <canvas id="canvas" width="640" height="480"></canvas>
+   <p class="story">I learnt to program in the 90's. This is like my &quot;<a href="http://en.wikipedia.org/wiki/Hello_world_program">hello worldy</a>&quot; for graphics stuff.</p>
+  <script type="application/javascript">
+function calculatePoint(x,y, cr, ci){
+	var maxIterations = 100;
+	var colourScale = 255/maxIterations
+	var zr = 0; 
+	var zi = 0;
+	var zrsq = 0;
+	var zisq = 0;
+	var colour = {red:0, green:0, blue:0, alpha:255};
+	
+	for ( var a = 0 ; a < maxIterations ; ++a ){
+		zi = zr * zi * 2 + ci;
+		zr = zrsq - zisq + cr;
+		zrsq = zr * zr;
+		zisq = zi * zi;
+		if ( zrsq + zisq > 4 ){
+			var shade = a*colourScale;
+			colour = {red:shade, green:shade, blue:shade, alpha:255};
+			return colour;
+		}
+	}
+	return colour;
+}
+
+function drawMandlebrotSet(imageData, left, right, top, bottom){
+	var xStepping = ( right - left ) / imageData.width;
+	var yStepping = ( top - bottom ) / imageData.height;
+	
+	for ( var a = 0 ; a < imageData.width ; ++a ){
+		cr = left + xStepping * a; 
+		for ( var b = 0 ; b < imageData.height ; ++b ){
+			ci = bottom + yStepping * b;
+			imageData.setPixel(a, b, calculatePoint(a, b, cr, ci));
+			
+		}
+	}
+}
+
+function draw() {
+	var canvas = document.getElementById("canvas");
+	var ctx = canvas.getContext("2d");
+	imageData = ctx.createImageData(640, 480);
+	imageData.setPixel = function(x, y, colour){
+		var idx = (x + y * this.width) * 4;
+		this.data[idx + 0] = colour.red;
+		this.data[idx + 1] = colour.green;
+		this.data[idx + 2] = colour.blue;
+		this.data[idx + 3] = colour.alpha;
+	}
+	
+	imageData.getPixel = function(x, y){
+		var idx = (x + y * this.width) * 4;
+		this.data[idx + 0] = colour.red;
+		this.data[idx + 1] = colour.green;
+		this.data[idx + 2] = colour.blue;
+		this.data[idx + 3] = colour.alpha;
+	}
+	
+	drawMandlebrotSet(imageData, -2,1,1,-1)
+	ctx.putImageData(imageData,0,0);
+}
+function init(){
+	draw();
+}
+  </script>

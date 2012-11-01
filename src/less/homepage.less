@@ -1,5 +1,4 @@
 @icon_colour:#AAA;
-/*@page_background:#46b8ed;*/
 @page_background:#fff;
 @main_highlight:#F00;
 @font_colour:#333;
@@ -41,6 +40,21 @@
     }
 }
 
+a{
+	text-decoration:none;
+	.bottom_border;
+	border-style: solid;
+	border-color: @font_colour;
+}
+
+a:hover{
+	text-decoration:none;
+	color: @main_highlight;
+	.bottom_border;
+	border-style: solid;
+	border-color: @main_highlight;
+}
+
 li{
 	font-weight: lighter;
 	font-size: 0.9rem;
@@ -54,6 +68,7 @@ strong{
 
 span.more {
 	.bottom_border;
+	border-style: dotted;
     cursor: pointer;
 	cursor: hand;
 }
@@ -108,6 +123,7 @@ body{
 
 .homepage_story{
 	.bottom_border;  
+	border-style: dotted;
 }
 .story_more{
 	position: relative;
@@ -208,5 +224,4 @@ mixins
 .bottom_border{
 	border:0px;
     border-bottom: 1px;
-    border-style: dotted;
 }
