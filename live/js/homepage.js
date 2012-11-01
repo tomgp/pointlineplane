@@ -1,3 +1,9 @@
+if(!window.console){
+	window.console = {}
+	window.console.log = function(s){
+		//do nothing, just sticking this in here so we can hopefully avoid trying to do console logs in IE on the more 'work in progress' pages
+	}
+}
 $(function(){
 	console.log("hello zepto");
 	$('span.more').on('mouseover', showMore).on('mouseout', showLess).on('tap', toggleMore);
@@ -44,15 +50,9 @@ $(function(){
 	}
 	
 	if(typeof init == 'function'){
-		if(console){
-			console.log('initialise page level JS');
-		}else{
-			alert("Sorry, this page may not work on your browser");
-		}	
+		console.log('initialise page level JS');
 		init(); //if there's an init function run it
 	}else{
-		if(console){
-			console.log('no page level JS');
-		}
+		console.log('no page level JS');
 	}
 });
