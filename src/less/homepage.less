@@ -21,7 +21,10 @@
 	clear:both;
 }
 
-/*TODO, define font size stops in pixels for responsiveness*/
+blockquote{
+	background-color: #eee;
+	.standard_text;
+}
 
 @media (min-width: 800px) {
     html {
@@ -55,6 +58,16 @@ a:hover{
 	border-color: @main_highlight;
 }
 
+a.title{
+	border-style: none;
+	color: @page_background;
+}
+
+a.title:hover{
+	border-style: none;
+	color: @main_highlight;
+}
+
 li{
 	font-weight: lighter;
 	font-size: 0.9rem;
@@ -72,6 +85,12 @@ span.more {
     cursor: pointer;
 	cursor: hand;
 }
+
+
+img{
+	width:100%;
+}
+
 
 img.story_small{
 	width:300px;
@@ -149,7 +168,7 @@ li{
 	list-style-type: circle;
 }
 
-p.story{
+p{
 	.standard_text;
 	color: #000;
 }
@@ -207,6 +226,17 @@ h3{
 	padding-top: 0px;
 }
 
+.post_meta{
+	.standard_text;
+	.bottom_border;
+	border-style: dotted;
+	margin-bottom: 2rem;
+}
+
+.blog_nav{
+	.bottom_border;
+	border-style: dotted;
+}
 
 /* 
 mixins

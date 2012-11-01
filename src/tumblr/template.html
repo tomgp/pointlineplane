@@ -1,0 +1,132 @@
+<html>
+    <head>
+        <title>{Title}{block:PostTitle} - {PostTitle}{/block:PostTitle}</title>
+        <link rel="shortcut icon" href="{Favicon}">
+        <link rel="alternate" type="application/rss+xml" href="{RSS}">
+        {block:Description}
+            <meta name="description" content="{MetaDescription}" />
+        {/block:Description}
+<link rel="stylesheet" type="text/css" href="http://www.pointlineplane.co.uk/css/homepage.css" />
+<style type="text/css">
+
+</style>
+</head>
+<body>
+    <div class="header"><a href="http://www.pointlineplane.co.uk/">home</a> <a href="http://blog.pointlineplane.co.uk">blog</a> <a href="http://twitter.com/tomp">twitter</a> - tom.g.pearson@gmail.com</div>
+    <div class="content" id="main_content">
+        <h1 class="story_title"><a class="title" href="/">{Title}</a></h1>
+        <div id="description" class="section">
+            <p id="description">{block:Description}
+                {Description}
+            {/block:Description}{block:AskEnabled} <a href="/ask">Any questions?</a>{/block:AskEnabled}</p>
+            
+        </div>
+        <a name="content"></a>
+            {block:Posts}
+                {block:Text}
+                        {block:Title}
+                            <h2>{Title}</h2>
+                        {/block:Title}
+                        {Body}
+                {/block:Text}
+
+                {block:Photo}
+                        <img src="{PhotoURL-500}" alt="{PhotoAlt}" class="story_medium"/>
+                        <br/>
+                        {block:Caption}
+                            {Caption}
+                        {/block:Caption}
+                {/block:Photo}
+
+                {block:Photoset}
+                        {Photoset-500}
+                        <br/>
+                        {block:Caption}
+                            {Caption}
+                        {/block:Caption}
+                {/block:Photoset}
+
+                {block:Quote}
+                        <blockquote>{Quote}</blockquote>
+                        {block:Source}
+                            <p>{Source}</p>
+                        {/block:Source}
+                {/block:Quote}
+
+                {block:Link}
+                        <h2><a href="{URL}" class="link" {Target}>{Name}</a></h2>
+                        {block:Description}
+                            {Description}
+                        {/block:Description}
+                {/block:Link}
+
+                {block:Chat}
+                        {block:Title}
+                            <h2>{Title}</h2>
+                        {/block:Title}
+
+                        <ul class="chat">
+                            {block:Lines}
+                                <li class="{Alt} user_{UserNumber}">
+                                    {block:Label}
+                                        <span class="label">{Label}</span>
+                                    {/block:Label}
+
+                                    {Line}
+                                </li>
+                            {/block:Lines}
+                        </ul>
+                {/block:Chat}
+
+                {block:Video}
+                        {Video-500}
+
+                        {block:Caption}
+                            {Caption}
+                        {/block:Caption}
+                {/block:Video}
+
+                {block:Audio}
+						<h2>{block:Artist}
+						{Artist}
+						{/block:Artist} - {block:TrackName}
+						{TrackName}
+						{/block:TrackName}</h2>
+						{block:AlbumArt}
+							<img src="{AlbumArtURL}" class="story_medium">
+						{/block:AlbumArt}
+                        {AudioPlayerBlack}
+
+                        {block:Caption}
+                            {Caption}
+                        {/block:Caption}
+                    
+                {/block:Audio}
+                <div class="post_meta">
+    				{block:HasTags} {block:Tags} <a class="tag" href="{TagURL}">#{Tag}</a> 
+    				{/block:Tags} {/block:HasTags}
+    				{block:RebloggedFrom}Reblogged from <a href="{ReblogParentURL}">{ReblogParentName}</a> {/block:RebloggedFrom}{block:NotReblog}Posted {/block:NotReblog} <a href="{Permalink}#content" class="permalink">{DayOfMonthWithZero} - {Month} - 0{Year} {block:NoteCount}({NoteCountWithLabel}){/block:NoteCount}</a>&nbsp; 
+				
+				    {block:PostNotes}{PostNotes}{/block:PostNotes}
+                </div>
+				
+            {/block:Posts}
+            <div class="blog_nav">
+        <ul>
+            {block:PreviousPage}
+                <li><a href="{PreviousPage}">More recent posts</a></li>
+            {/block:PreviousPage}
+
+            {block:NextPage}
+                <li><a href="{NextPage}">Older posts</a></li>
+            {/block:NextPage}
+
+            <li><a href="/archive">Archive</a></li>
+                    <div class="blocker"></div> 
+            </div>
+
+        <div class="footer">&copy; Tom Pearson 2012</div>
+
+        </div>
+    </body>
+</html>
