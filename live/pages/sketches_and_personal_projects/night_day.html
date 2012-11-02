@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+	<meta charset="UTF-8">
 	<head>
 		<link rel="stylesheet" type="text/css" href="/css/homepage.css" />
 		<title>
@@ -27,6 +28,16 @@
 	var assetsToLoad = 2;
 	var playState = "none";
 
+	function dateUpdate(){
+		date = dayToDate(document.getElementById('daySlider').value);
+		time = minutesToTime(document.getElementById('timeSlider').value);
+		date.setHours(time.hours);
+		date.setMinutes(time.minutes);
+		//positionOutput('daySlider', 'date');
+		//positionOutput('timeSlider', 'time');
+		setDateTime(date);
+	}
+
 	function init() {
 		declinationLookup = generateDeclinationTable();
 		canvas = document.getElementById("map");
@@ -48,15 +59,7 @@
 		dateUpdate();
 	}
 
-	function dateUpdate(){
-		date = dayToDate(document.getElementById('daySlider').value);
-		time = minutesToTime(document.getElementById('timeSlider').value);
-		date.setHours(time.hours);
-		date.setMinutes(time.minutes);
-		//positionOutput('daySlider', 'date');
-		//positionOutput('timeSlider', 'time');
-		setDateTime(date);
-	}
+
 	
 	function positionOutput(inputElementID, outputElementID){
 		// Measure width of range input
@@ -206,11 +209,12 @@ canvas{
 </style>
 <div class="homepage_story">
 	<h1 class="story_title">Night / day terminator sketch</h1>
+	<p class="instructions">Use the sliders below the map to find out where the sun is in the sky at a given time. (Only works reliably in Chrome and Safari, sorry)<p>
 	<canvas id="map" width='625' height='320'>
 	</canvas>
 
 	<div id="controls">
-		<p class="instructions">Use the sliders below to find out where the sun is in the sky at a given time.<p>
+		
 		<div class="control">
 			<label for="daySlider">Day: </label><input type="range" value="1" min="0" max="365" step="1" id="daySlider" /> 
 			<output id="date" for="dateSlider">0</output><br />
@@ -221,7 +225,7 @@ canvas{
 		</div>
 	</div>
 	<p>
-		I originally made this as part of a prototype for a visualisation relating to the <a href="http://en.wikipedia.org/wiki/Transit_of_Venus">transit of Venus</a> (in the end it never got built; time, priorities, etc.). I like the way it shows how the standard wiggly night/day line changes over the course of a year and also how it illustrates how map projections bend straight lines on the earth's surface.
+		I originally made this as part of a prototype for a visualisation relating to the <a href="http://en.wikipedia.org/wiki/Transit_of_Venus">transit of Venus</a> (in the end it never got built; time, priorities, etc.). I like the way it shows how the standard wiggly night/day line changes over the course of a year and, incidentally, the way map projections bend straight lines on the earth's surface.
 	</p>
 </div>
 
@@ -242,4 +246,16 @@ canvas{
 	</body>
 	<script src='/js/vendor/zepto.min.js'></script>
 	<script src='/js/homepage.js'></script>
+	<script type="text/javascript">
+		var _gaq = _gaq || [];
+		_gaq.push(['_setAccount', 'UA-21829691-1']);
+		_gaq.push(['_setDomainName', 'pointlineplane.co.uk']);
+		_gaq.push(['_trackPageview']);
+
+		(function() {
+		var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+		ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+		var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+		})();
+	</script>
 </html>
