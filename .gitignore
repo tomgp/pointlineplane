@@ -3,3 +3,5 @@
 *.DS_Store
 
 src/graphical_assets/iconSweets.psd
+
+live/js/.DS_Store
